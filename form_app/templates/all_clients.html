@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All Clients</title>
+</head>
+<body>
+    <h2>All Clients</h2>
+    
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Client ID</th>
+                <th>Client Name</th>
+                <th>Client Type</th>
+                <th>Client Location</th>
+                <th>State/Country</th>
+                <th>Client Contact</th>
+                <th>Client Business</th>
+                <th>Primary Contact Email</th>
+                <th>Secondary Contact Email</th>
+                <th>Primary Contact Number</th>
+                <th>Secondary Contact Number</th>
+                <th>Date of Contract</th>
+                <th>Expiry of Contract</th>
+                <th>Status</th>
+                <th>Fee Structure</th>
+                <th>TimeStamp</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for client in clients %}
+            <tr>
+                <td>{{ client.key_client_id }}</td>
+                <td>{{ client.client_name }}</td>
+                <td>{{ client.client_type }}</td>
+                <td>{{ client.client_location }}</td>
+                <td>{{ client.client_state_country }}</td>
+                <td>{{ client.client_contact }}</td>
+                <td>{{ client.client_business }}</td>
+                <td>{{ client.primary_contact_email }}</td>
+                <td>{{ client.secondary_contact_email }}</td>
+                <td>{{ client.primary_contact_num }}</td>
+                <td>{{ client.secondary_contact_num }}</td>
+                <td>{{ client.date_of_contract }}</td>
+                <td>{{ client.expiry_of_contract }}</td>
+                <td>{{ client.status }}</td>
+                <td>{{ client.fee_structure }}</td>
+                <td>{{ client.time_stamp }}</td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="15">No client data is available.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    
+    <a href="/">Back to form</a>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Application Form</title>
+</head>
+<body>
+    <h2>Application Form</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+    <a href="/all-clients/">All Clients</a>
+    <a href="/add-client/">Add Client Type</a>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All Candidate Applications</title>
+</head>
+<body>
+    <h2>All Candidate Applications</h2>
+    
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Full Name</th>
+                <th>Contact #1</th>
+                <th>Contact #2</th>
+                <th>Email #1</th>
+                <th>Email #2</th>
+                <th>Country</th>
+                <th>City</th>
+                <th>State</th>
+                <th>Address</th>
+                <th>Job ID</th>
+                <th>Candidate ID</th>
+                <th>Job Title</th>
+                <th>Calling Date</th>
+                <th>Calling Time</th>
+                <th>Timezone</th>
+                <th>Recruitment Source</th>
+                <th>2nd Interview Date</th>
+                <th>2nd Interview Time</th>
+                <th>2nd Interview Timezone</th>
+                <th>Hiring Manager ID</th>
+                <th>Interviewer ID</th>
+                <th>Interview Duration</th>
+                <th>Interview Mode</th>
+                <th>Technical Score</th>
+                <th>Technical Assessment Score</th>
+                <th>Leadership Potential</th>
+                <th>Recommend</th>
+                <th>Interview Panel</th>
+                <th>Interview Feedback</th>
+                <th>Overall Technical Rating</th>
+                <th>Overall Personality</th>
+                <th>Communication Skills Score</th>
+                <th>Problem-Solving Skills</th>
+                <th>Team Collaboration Experience</th>
+                <th>Current Employment Status</th>
+                <th>Follow-up Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for form in forms %}
+            <tr>
+                <td>{{ form.full_name }}</td>
+                <td>{{ form.contact_1 }}</td>
+                <td>{{ form.contact_2 }}</td>
+                <td>{{ form.email_1 }}</td>
+                <td>{{ form.email_2 }}</td>
+                <td>{{ form.country }}</td>
+                <td>{{ form.city }}</td>
+                <td>{{ form.state }}</td>
+                <td>{{ form.address }}</td>
+                <td>{{ form.job_id }}</td>
+                <td>{{ form.candidate_id }}</td>
+                <td>{{ form.job_title }}</td>
+                <td>{{ form.calling_date }}</td>
+                <td>{{ form.calling_time }}</td>
+                <td>{{ form.timezone }}</td>
+                <td>{{ form.recruitment_source }}</td>
+                <td>{{ form.second_interview_date }}</td>
+                <td>{{ form.second_interview_time }}</td>
+                <td>{{ form.second_interview_timezone }}</td>
+                <td>{{ form.hiring_manager_id }}</td>
+                <td>{{ form.interviewer_id }}</td>
+                <td>{{ form.interview_duration }}</td>
+                <td>{{ form.interview_mode }}</td>
+                <td>{{ form.technical_score }}</td>
+                <td>{{ form.technical_assessment_score }}</td>
+                <td>{{ form.leadership_potential }}</td>
+                <td>{{ form.recommend }}</td>
+                <td>{{ form.interview_panel }}</td>
+                <td>{{ form.interview_feedback }}</td>
+                <td>{{ form.overall_technical_rating }}</td>
+                <td>{{ form.overall_personality }}</td>
+                <td>{{ form.communication_skills_score }}</td>
+                <td>{{ form.problem_solving_skills }}</td>
+                <td>{{ form.team_collaboration_experience }}</td>
+                <td>{{ form.current_employment_status }}</td>
+                <td>{{ form.follow_up_actions }}</td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="35">No applications have been submitted yet.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    
+    <a href="/">Back to form</a>
+</body>
+</html>

@@ -1,0 +1,18 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Submitted</title>
+</head>
+<body>
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form.new_client_type }}
+        <button type="submit">Add Client</button>
+    </form>
+    
+</body>
+</html>
